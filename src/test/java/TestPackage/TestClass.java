@@ -62,7 +62,7 @@ public class TestClass {
 ////		options.merge(cap);
 //		driver = new RemoteWebDriver(new URL("http://192.168.1.6:4444/wd/hub"),cap);
 //		
-//		driver.get("http://google.com");
+		driver.get("http://google.com");
 		
 	}
 }
