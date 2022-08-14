@@ -6,7 +6,7 @@
     <classes>
       <class name="TestPackage.TestClass">
         <methods>
-          <include name="demo" invocation-numbers="0"/>
+          <include name="remoteDriver" invocation-numbers="0"/>
         </methods>
       </class> <!-- TestPackage.TestClass -->
     </classes>
