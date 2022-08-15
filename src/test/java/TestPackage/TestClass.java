@@ -31,8 +31,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestClass {
 	public static WebDriver driver;
 	
-//	@Parameters("browser")
-//	@Test
+	@Parameters("browser")
+	@Test
 	public void demo(@Optional String browserName) {
 		switch (browserName.toUpperCase()) {
 		case "CHROME":
@@ -50,7 +50,7 @@ public class TestClass {
 		driver.get("https:google.com");
 	}
 //	@Parameters("browser")
-	@Test
+// 	@Test
 	public void remoteDriver()  {
 //		DesiredCapabilities cap = new DesiredCapabilities();
 //		cap.setBrowserName(broswerName);
