@@ -47,7 +47,7 @@ public class TestClass {
 			break;
 		}
 		driver.manage().window().maximize();
-		driver.get("https:google.com");
+		driver.get("https://amazon.com");
 	}
 //	@Parameters("browser")
 // 	@Test
