@@ -15,13 +15,17 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -30,6 +34,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestClass {
 	public static WebDriver driver;
+	@FindBy(name = "q")
+	private WebElement ele;
 	
 	@Parameters("browser")
 	@Test
@@ -45,12 +51,22 @@ public class TestClass {
 		case "FIREFOX":
 			driver = WebDriverManager.firefoxdriver().create();
 			break;
+			default:driver = WebDriverManager.chromedriver().create();
 		}
 		driver.manage().window().maximize();
 		driver.get("https:google.com");
+		System.out.println("Browser Name"+browserName+"Opened successfully");
+		PageFactory.initElements(driver, this);
+		ele.sendKeys("https://amazon.com");
+		ele.sendKeys(Keys.ENTER);
+		System.out.println("Current Tab title------>"+driver.getTitle());
 	}
 //	@Parameters("browser")
+<<<<<<< HEAD
 // 	@Test
+=======
+//	@Test
+>>>>>>> 876d1cf (Adding new Changes)
 	public void remoteDriver()  {
 //		DesiredCapabilities cap = new DesiredCapabilities();
 //		cap.setBrowserName(broswerName);
