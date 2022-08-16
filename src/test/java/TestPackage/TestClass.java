@@ -47,7 +47,8 @@ public class TestClass {
 			break;
 		}
 		driver.manage().window().maximize();
-		driver.get("https://amazon.com");
+		driver.get("https://flipkart.com");
+		System.out.println("Current Tab Tile is----->"+driver.getTitle());
 	}
 //	@Parameters("browser")
 // 	@Test
