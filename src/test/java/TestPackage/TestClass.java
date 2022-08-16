@@ -62,11 +62,7 @@ public class TestClass {
 		System.out.println("Current Tab title------>"+driver.getTitle());
 	}
 //	@Parameters("browser")
-<<<<<<< HEAD
-// 	@Test
-=======
 //	@Test
->>>>>>> 876d1cf (Adding new Changes)
 	public void remoteDriver()  {
 //		DesiredCapabilities cap = new DesiredCapabilities();
 //		cap.setBrowserName(broswerName);
